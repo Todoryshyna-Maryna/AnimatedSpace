@@ -13,17 +13,53 @@
 //         obj2.style.position = 'absolute';
 //     }
 // }
+
+// smooth scroll
 $("html").easeScroll({
-    frameRate: 60,
-    animationTime: 1000,
-    stepSize: 120,
-    pulseAlgorithm: 1,
-    pulseScale: 8,
-    pulseNormalize: 1,
-    accelerationDelta: 20,
-    accelerationMax: 1,
-    keyboardSupport: true,
-    arrowScroll: 50,
-    touchpadSupport: true,
-    fixedBackground: true
+  frameRate: 60,
+  animationTime: 1000,
+  stepSize: 120,
+  pulseAlgorithm: 1,
+  pulseScale: 8,
+  pulseNormalize: 1,
+  accelerationDelta: 20,
+  accelerationMax: 1,
+  keyboardSupport: true,
+  arrowScroll: 50,
+  touchpadSupport: true,
+  fixedBackground: true
 });
+
+
+$(document).ready(function () {
+  document.body.scrollTop = 0;
+
+  var eveningSky = $('#evening-sky');
+  var land = $('#land');
+  var landTop = land.css('bottom');
+
+  var position = document.body.scrollTop;
+  var scroll = setInterval(function () {
+    document.body.scrollTop += 1;
+    eveningSky.css('top', (document.body.scrollTop + 14) + 'px')
+    land.css('bottom', "-=1"+ 'px')
+    land.animation
+    console.log('scroll')
+  }, 10);
+
+  $(document).scroll(function () {
+    position = document.body.scrollTop;
+
+    if (position >= 1000) {
+      clearInterval(scroll);
+      $(document).unbind('scroll');
+    }
+  })
+
+
+  // $(function () {
+  //
+  //
+  // })()
+
+})
