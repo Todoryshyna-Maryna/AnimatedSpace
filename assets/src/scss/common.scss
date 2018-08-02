@@ -16,26 +16,14 @@ div, section {
   transition: 500ms;
 }
 
-#obj1 {
-  background: azure;
-  height: 50px;
-  width: 50px;
-  border-radius: 100%;
-  position: fixed;
-  left: 10vw;
-  top: 10vh;
-  bottom: 0;
-  margin: auto;
-}
-
 .hide {
   width: 0px !important;
   height: 0px !important;
+  margin:auto;
+  top: 0;
+  bottom: 0;
   color: transparent !important;
   opacity: 0 !important;
   transition: 2s;
 }
 
-#evening-sky {
-
-}

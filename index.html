@@ -6,15 +6,17 @@
   <link rel="stylesheet" href="main.min.css">
 </head>
 <body>
-
+<noscript><p>Javascript is disabled on your browser. Enable javascript or open
+  this page in another browser.</p>
+</noscript>
 <main>
 
-  <section class="static-block layer hide" id="point1" data-params='0,600,600'>
+  <section class="static-block layer hide" id="autoscroll" data-params='0,600,600'>
     <article class="animated-element" id="evening-sky"></article>
     <article class="animated-element" id="land"></article>
   </section>
 
-  <section class="layer hide" id="point2" data-params='400,2300,800'>
+  <section class="static-block layer hide" id="diffused-stars" data-params='350,3000,13000'>
 
     <div id='stars'></div>
     <div id='stars2'></div>
@@ -22,10 +24,8 @@
 
   </section>
 
-  <section class="layer hide" id="point3" data-params='1600,5000,1000'>
-
-    <div id="obj5"></div>
-
+  <section class="static-block layer hide" id="animated-stars" data-params='1000,2500,300'>
+    <div class="animated-element" id="zori"></div>
   </section>
 
   <section class="layer hide" id="point4" data-params='1800,5000,1000'>
@@ -59,6 +59,7 @@
 <script src="jquery.easeScroll.js"></script>
 <script src="pushIn.js"></script>
 <script src="animations.js"></script>
+<script src="drowingStars.js"></script>
 
 
 </body>

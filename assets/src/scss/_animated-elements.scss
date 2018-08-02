@@ -31,4 +31,20 @@
     bottom: 0;
     margin: auto;
   }
+
+  &#zori {
+    background: url("./assets/public/imgs/google.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 600px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 0;
+    transition: 2s;
+  }
 }

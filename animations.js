@@ -41,16 +41,16 @@ $(document).ready(function () {
   var position = document.body.scrollTop;
   var scroll = setInterval(function () {
     document.body.scrollTop += 1;
-    eveningSky.css('top', (document.body.scrollTop + 14) + 'px')
-    land.css('bottom', "-=1"+ 'px')
-    land.animation
+    eveningSky.css('top', (document.body.scrollTop +=3) + 'px')
+    land.css('bottom', "-=3"+ 'px')
+    // land.animation
     console.log('scroll')
   }, 10);
 
   $(document).scroll(function () {
     position = document.body.scrollTop;
 
-    if (position >= 1000) {
+    if (position >= 2400) {
       clearInterval(scroll);
       $(document).unbind('scroll');
     }
